@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/login_background">
+
+
+   <androidx.appcompat.widget.AppCompatImageView
+       android:id="@+id/login_img_photo"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       android:layout_margin="@dimen/login_item_margin"
+       app:layout_constraintWidth_percent="0.4"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+       app:srcCompat="@drawable/foto" />
+
+   <com.google.android.material.textfield.TextInputLayout
+       android:id="@+id/login_text_name_layout"
+       app:layout_constraintWidth_percent="0.8"
+       app:startIconDrawable="@drawable/cara"
+       app:startIconContentDescription="@string/login_img_name_description"
+       app:endIconMode="custom"
+       app:endIconDrawable="@android:drawable/ic_menu_view"
+       app:endIconContentDescription="@string/login_img_name_end_description"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/login_img_photo"
+       android:hint="@string/login_text_name"
+       app:errorEnabled="true"
+       style="@style/login_input_layout">
+
+      <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/login_text_name"
+          style="@style/login_input"
+          android:inputType="text"/>
+
+   </com.google.android.material.textfield.TextInputLayout>
+
+   <com.google.android.material.textfield.TextInputLayout
+       android:id="@+id/login_text_surname_layout"
+       app:layout_constraintWidth_percent="0.8"
+       app:startIconDrawable="@drawable/cara"
+       app:startIconContentDescription="@string/login_img_surname_description"
+       app:endIconMode="custom"
+       app:endIconDrawable="@android:drawable/ic_menu_view"
+       app:endIconContentDescription="@string/login_img_surname_end_description"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/login_text_name_layout"
+       android:hint="@string/login_text_surname"
+       app:errorEnabled="true"
+       style="@style/login_input_layout">
+
+      <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/login_text_surname"
+          style="@style/login_input"
+          android:inputType="text"/>
+
+   </com.google.android.material.textfield.TextInputLayout>
+
+   <com.google.android.material.textfield.TextInputLayout
+       android:id="@+id/login_spinner_ages_layout"
+       app:layout_constraintWidth_percent="0.8"
+       style="@style/login_spinner_layout"
+       app:layout_constraintTop_toBottomOf="@+id/login_text_surname_layout"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:errorEnabled="true"
+       android:hint="@string/login_dropdown_edad">
+
+      <AutoCompleteTextView
+          android:id="@+id/login_spinner_ages"
+          style="@style/login_spinner_ages" />
+
+   </com.google.android.material.textfield.TextInputLayout>
+
+   <com.google.android.material.button.MaterialButton
+       android:id="@+id/login_btn_ok"
+       android:backgroundTint="@color/login_btn_ok"
+       app:layout_constraintWidth_percent="0.6"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       android:text="@string/login_btn_ok"
+       android:textAllCaps="false"
+       android:enabled="false"
+       app:layout_constraintTop_toBottomOf="@+id/login_spinner_ages_layout"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       android:layout_marginTop="30dp"/>
+
+   <com.google.android.material.textview.MaterialTextView
+       android:id="@+id/login_foot_text"
+       style="@style/login_subtext"
+       android:text="@string/login_foot_text"
+       app:layout_constraintEnd_toStartOf="@+id/login_foot_link"
+       app:layout_constraintHorizontal_bias="0.5"
+       app:layout_constraintHorizontal_chainStyle="packed"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintBottom_toBottomOf="parent" />
+
+   <com.google.android.material.textview.MaterialTextView
+       android:id="@+id/login_foot_link"
+       style="@style/login_link"
+       android:text="Ver condiciones"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.5"
+       app:layout_constraintStart_toEndOf="@+id/login_foot_text"
+       app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

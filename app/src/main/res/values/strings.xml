@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Registro</string>
+    <string name="login_text_name">¿Como te llamas?</string>
+    <string name="login_img_name_description">Imagen cara</string>
+    <string name="login_img_name_end_description">Icono ojo</string>
+    <string name="login_img_surname_description">Imagen cara</string>
+    <string name="login_img_surname_end_description">Icono ojo</string>
+    <string name="login_text_surname">¿Y tu apellido?</string>
+    <string name="login_dropdown_edad">¿Cuantos años tienes?</string>
+    <string name="age_1">0-5</string>
+    <string name="age_2">6-11</string>
+    <string name="age_3">12-77</string>
+    <string name="age_4">18-99</string>
+    <string name="login_btn_ok">Me apunto</string>
+    <string name="login_foot_text">Politica de privacidad</string>
+    <string name="login_text_error">Ups no creo que sea correcto, reísalo</string>
+    <string name="login_age_error">Esta app no es para ti</string>
+</resources>
