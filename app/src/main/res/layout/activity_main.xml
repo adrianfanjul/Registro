@@ -10,13 +10,15 @@
 
    <androidx.appcompat.widget.AppCompatImageView
        android:id="@+id/login_img_photo"
+       android:contentDescription="@string/login_img_text"
        android:layout_width="0dp"
        android:layout_height="wrap_content"
        android:layout_margin="@dimen/login_item_margin"
-       app:layout_constraintWidth_percent="0.4"
+       android:onClick="btn_camera_click"
        app:layout_constraintEnd_toEndOf="parent"
        app:layout_constraintStart_toStartOf="parent"
        app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintWidth_percent="0.4"
        app:srcCompat="@drawable/foto" />
 
    <com.google.android.material.textfield.TextInputLayout
@@ -81,17 +83,12 @@
 
    <com.google.android.material.button.MaterialButton
        android:id="@+id/login_btn_ok"
-       android:backgroundTint="@color/login_btn_ok"
        app:layout_constraintWidth_percent="0.6"
-       android:layout_width="0dp"
-       android:layout_height="wrap_content"
        android:text="@string/login_btn_ok"
-       android:textAllCaps="false"
-       android:enabled="false"
        app:layout_constraintTop_toBottomOf="@+id/login_spinner_ages_layout"
        app:layout_constraintStart_toStartOf="parent"
        app:layout_constraintEnd_toEndOf="parent"
-       android:layout_marginTop="30dp"/>
+       style="@style/login_btn_ok" />
 
    <com.google.android.material.textview.MaterialTextView
        android:id="@+id/login_foot_text"
@@ -106,10 +103,11 @@
    <com.google.android.material.textview.MaterialTextView
        android:id="@+id/login_foot_link"
        style="@style/login_link"
-       android:text="Ver condiciones"
+       android:onClick="link_condiciones_click"
+       android:text="@string/login_foot_link"
+       app:layout_constraintBottom_toBottomOf="parent"
        app:layout_constraintEnd_toEndOf="parent"
        app:layout_constraintHorizontal_bias="0.5"
-       app:layout_constraintStart_toEndOf="@+id/login_foot_text"
-       app:layout_constraintBottom_toBottomOf="parent" />
+       app:layout_constraintStart_toEndOf="@+id/login_foot_text" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

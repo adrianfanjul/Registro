@@ -15,4 +15,6 @@
     <string name="login_foot_text">Politica de privacidad</string>
     <string name="login_text_error">Ups no creo que sea correcto, reísalo</string>
     <string name="login_age_error">Esta app no es para ti</string>
+    <string name="login_img_text">Imagen chica con camara de fotos</string>
+    <string name="login_foot_link">Ver condiciones</string>
 </resources>
