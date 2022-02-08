@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity  {
             public void afterTextChanged(Editable editable) {
                 if(binding.loginTextName.getText().toString().length()>0){
                     if(binding.loginTextName.getText().toString().contains("@")||binding.loginTextName.getText().toString().contains("!")){
-                        binding.loginTextName.setError(getString(R.string.login_text_error));
+                        binding.loginTextNameLayout.setError(getString(R.string.login_text_error));
                     }
                 }
                 enableButton();
@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity  {
             public void afterTextChanged(Editable editable) {
                 if(binding.loginTextSurname.getText().toString().length()>0){
                     if(binding.loginTextSurname.getText().toString().contains("@")||binding.loginTextSurname.getText().toString().contains("!")){
-                        binding.loginTextSurname.setError(getString(R.string.login_text_error));
+                        binding.loginTextSurnameLayout.setError(getString(R.string.login_text_error));
                     }
                 }
                 enableButton();
@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity  {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
                 if(position<3){
-                    binding.loginSpinnerAges.setError((getString(R.string.login_age_error)));
+                    binding.loginSpinnerAgesLayout.setError((getString(R.string.login_age_error)));
                 }else{
                     binding.loginSpinnerAges.setError(null);
                 }
